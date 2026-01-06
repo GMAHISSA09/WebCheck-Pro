@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Website Audit</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WebCheck Pro – Website Audit Tool</title>
+
+  <style>
+    /* Basic reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 16px;
+    }
+
+    a {
+      color: #4dabf7;
+      text-decoration: underline; /* 🔥 هذا هو الحل ديال Lighthouse */
+    }
+
+    a:focus,
+    a:hover {
+      text-decoration-thickness: 3px;
+    }
+
+    main {
+      padding: 24px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Website Audit Service</h1>
-  <p>We analyze your website performance.</p>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#audit">Audit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>WebCheck Pro</h1>
+    <p>Fast, simple website performance and accessibility checks.</p>
+
+    <section id="features">
+      <h2>Features</h2>
+      <p>Performance, SEO, and accessibility analysis.</p>
+    </section>
+
+    <section id="audit">
+      <h2>Run an Audit</h2>
+      <p>Paste your website URL to begin.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 WebCheck Pro</p>
+  </footer>
 </body>
 </html>
