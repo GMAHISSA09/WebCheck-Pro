@@ -12,7 +12,7 @@ if (form) {
     const url = document.getElementById("urlInput").value;
     result.textContent = "Analyzing...";
 
-    const apiKey = "YOUR_API_KEY_HERE";
+    const apiKey = "AIzaSyCLa7I2JW7qyju5mqt8fPiy4ucjCRDf3wM";
 
     const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(
       url
