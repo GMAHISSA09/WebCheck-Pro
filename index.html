@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="WebCheck Pro is a lightweight tool for testing website performance, SEO, and accessibility.">
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WebCheck Pro – Website Audit Tool</title>
 
+  <!-- SEO -->
+  <title>WebCheck Pro – Website Performance & Accessibility Audit</title>
+  <meta name="description" content="WebCheck Pro is a lightweight web tool to analyze website performance, accessibility, SEO, and best practices using modern web standards.">
+
+  <!-- Styles (minimal & clean) -->
   <style>
-    /* Basic reset */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background-color: #0f0f0f;
       color: #ffffff;
       line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid #222;
     }
 
     nav ul {
@@ -20,20 +28,35 @@
       display: flex;
       gap: 20px;
       padding: 16px;
+      margin: 0;
     }
 
     a {
       color: #4dabf7;
-      text-decoration: underline; /* 🔥 هذا هو الحل ديال Lighthouse */
+      text-decoration: underline;
     }
 
-    a:focus,
-    a:hover {
+    a:hover,
+    a:focus {
       text-decoration-thickness: 3px;
     }
 
     main {
-      padding: 24px;
+      padding: 32px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
@@ -51,16 +74,32 @@
 
   <main id="main-content">
     <h1>WebCheck Pro</h1>
-    <p>Fast, simple website performance and accessibility checks.</p>
+    <p>
+      Analyze your website speed, accessibility, SEO, and best practices
+      using clean, modern, and lightweight tools.
+    </p>
 
     <section id="features">
       <h2>Features</h2>
-      <p>Performance, SEO, and accessibility analysis.</p>
+      <ul>
+        <li>Performance analysis (LCP, CLS, TBT)</li>
+        <li>Accessibility audits</li>
+        <li>SEO & best practices checks</li>
+      </ul>
     </section>
 
     <section id="audit">
       <h2>Run an Audit</h2>
-      <p>Paste your website URL to begin.</p>
+      <p>
+        This project is currently a testing ground for automated website audits.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        For questions or collaboration, reach out via GitHub.
+      </p>
     </section>
   </main>
 
@@ -70,5 +109,3 @@
 </body>
 </html>
 
-
-Improve accessibility: add main landmark and link underline
