@@ -1,33 +1,41 @@
+console.log("JS LOADED");
+
 const form = document.getElementById("auditForm");
 const result = document.getElementById("result");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+console.log("Form:", form);
 
-  const url = document.getElementById("urlInput").value;
-  result.textContent = "Analyzing...";
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const apiKey = "YOUR_API_KEY_HERE";
+    const url = document.getElementById("urlInput").value;
+    result.textContent = "Analyzing...";
 
-  const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(
-    url
-  )}&strategy=mobile&key=${apiKey}`;
+    const apiKey = "YOUR_API_KEY_HERE";
 
-  try {
-    const res = await fetch(apiUrl);
-    const data = await res.json();
+    const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(
+      url
+    )}&strategy=mobile&key=${apiKey}`;
 
-    const lighthouse = data.lighthouseResult;
+    try {
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+      console.log("API DATA:", data);
 
-    const output = {
-      performance: lighthouse.categories.performance.score * 100,
-      accessibility: lighthouse.categories.accessibility.score * 100,
-      seo: lighthouse.categories.seo.score * 100,
-      bestPractices: lighthouse.categories["best-practices"].score * 100,
-    };
+      const lighthouse = data.lighthouseResult;
 
-    result.textContent = JSON.stringify(output, null, 2);
-  } catch (err) {
-    result.textContent = "Error analyzing site";
-  }
-});
+      const output = {
+        performance: lighthouse.categories.performance.score * 100,
+        accessibility: lighthouse.categories.accessibility.score * 100,
+        seo: lighthouse.categories.seo.score * 100,
+        bestPractices: lighthouse.categories["best-practices"].score * 100,
+      };
+
+      result.textContent = JSON.stringify(output, null, 2);
+    } catch (err) {
+      console.error(err);
+      result.textContent = "Error analyzing site";
+    }
+  });
+}
